@@ -75,17 +75,16 @@
 // The image may be unchanged if neither the width or height are greater than the
 // given maximumWidthOrHeight argument
 - (UIImage *)resizedImageWithMaximumDimension:(CGFloat)maximumWidthOrHeight
-                         interpolationQuality:(CGInterpolationQuality)quality
-{
+                         interpolationQuality:(CGInterpolationQuality)quality {
     float ratio = self.size.width / self.size.height;
-    
+
     CGSize newSize = self.size;
 
     if ((ratio >= 1.f) && (self.size.width > maximumWidthOrHeight))
         newSize = CGSizeMake(maximumWidthOrHeight, maximumWidthOrHeight / ratio);
     else if ((ratio < 1.f) && (self.size.height > maximumWidthOrHeight))
         newSize = CGSizeMake(maximumWidthOrHeight * ratio, maximumWidthOrHeight);
-    
+
     return [self resizedImage:newSize interpolationQuality:quality];
 }
 

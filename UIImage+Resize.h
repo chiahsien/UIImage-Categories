@@ -17,7 +17,7 @@
      interpolationQuality:(CGInterpolationQuality)quality;
 
 - (UIImage *)resizedImageWithMaximumDimension:(CGFloat)maximumWidthOrHeight
-     interpolationQuality:(CGInterpolationQuality)quality;
+                         interpolationQuality:(CGInterpolationQuality)quality;
 
 - (UIImage *)resizedImageWithContentMode:(UIViewContentMode)contentMode
                                   bounds:(CGSize)bounds
